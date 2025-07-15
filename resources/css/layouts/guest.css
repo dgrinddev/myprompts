@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    /* <!-- Arctic */
+    --color-primary: var(--color-blue-700);
+    --color-on-primary: var(--color-white);
+    /* Arctic --> */
+
+    --color-primary-dark: var(--color-white);
+    --color-on-primary-dark: var(--color-black);
+}
+
+@theme {
+    /* Custom breakpoints */
+    --breakpoint-sm: 375px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1200px;
+}
+
+@utility container {
+    margin-inline: auto; /* Centerer containeren */
+    padding-inline: 20px; /* Standard padding */
+
+    @media (width >= theme(--breakpoint-sm)) {
+        max-width: 100%;
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+        max-width: var(--breakpoint-md);
+    }
+
+    @media (width >= theme(--breakpoint-lg)) {
+        max-width: var(--breakpoint-lg);
+        padding-inline: 80px;
+    }
+}
+
+/* Animated Border Gradient */
+@property --border-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@theme{
+    --animate-rotate-border: border-rotate 3s linear infinite;
+    @keyframes border-rotate {
+        to {
+            --border-angle: 360deg;
+        }
+    }
+}
+
+/* custom easing function */
+@theme{
+    --ease-back-in-out: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-back-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* <!-- HERO BANNER IMG SCALE ANIMATION ON SCROLL */
+/* HERO BANNER IMG SCALE ANIMATION ON SCROLL: default skærme */
+@keyframes scale-on-scroll {
+    from {transform: scale(1);}
+    to {transform: scale(1.15);}
+}
+.hero-scale-animation {
+    transform-origin: center center;
+    animation-fill-mode: both;
+}
+/* HERO BANNER IMG SCALE ANIMATION ON SCROLL: Meget smalle/høje skærme */
+@media (width < theme(--breakpoint-lg)) and (max-aspect-ratio: 4/9) {
+    @keyframes scale-on-scroll {
+        from {transform: scale(1);}
+        to {transform: scale(1.08);}
+    }
+}
+/* HERO BANNER IMG SCALE ANIMATION ON SCROLL: Skærme omkring ratio 0.461 */
+@media (width < theme(--breakpoint-lg)) and (min-aspect-ratio: 4/9) and (max-aspect-ratio: 5/10) {
+    @keyframes scale-on-scroll {
+        from {transform: scale(1);}
+        to {transform: scale(1.1);}
+    }
+}
+/* HERO BANNER IMG SCALE ANIMATION ON SCROLL: Medium skærme */
+@media (width < theme(--breakpoint-lg)) and (min-aspect-ratio: 5/10) and (max-aspect-ratio: 6/10) {
+    @keyframes scale-on-scroll {
+        from {transform: scale(1);}
+        to {transform: scale(1.115);}
+    }
+}
+/* HERO BANNER IMG SCALE ANIMATION ON SCROLL: iPad Air 820/1180 = 0,694915254237288 */
+@media (width < theme(--breakpoint-lg)) and (min-aspect-ratio: 6/10) and (max-aspect-ratio: 7/10) {
+    @keyframes scale-on-scroll {
+        from {transform: scale(1);}
+        to {transform: scale(1.105);}
+    }
+}
+/* HERO BANNER IMG SCALE ANIMATION ON SCROLL: iPad Mini 768/1024 = 0,75 */
+@media (width < theme(--breakpoint-lg)) and (min-aspect-ratio: 7/10) and (max-aspect-ratio: 8/10) {
+    @keyframes scale-on-scroll {
+        from {transform: scale(1);}
+        to {transform: scale(1.055);}
+    }
+}
+/* HERO BANNER IMG SCALE ANIMATION ON SCROLL: iPhone SE (landscape) 667/375 = 1,778666666666667 */
+@media (width < theme(--breakpoint-lg)) and (min-aspect-ratio: 17/10) and (max-aspect-ratio: 21/10) {
+    @keyframes scale-on-scroll {
+        from {transform: scale(1);}
+        to {transform: scale(1.059);}
+    }
+}
+/* HERO BANNER IMG SCALE ANIMATION ON SCROLL --> */

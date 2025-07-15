@@ -1,0 +1,20 @@
+User-agent: *
+# Tillad alle offentlige sider
+Allow: /
+
+# Bloker private brugerområder
+Disallow: /user/
+Disallow: /admin/
+
+# Bloker auth-sider fra indeksering (optional - kan diskuteres)
+Disallow: /login
+Disallow: /register
+
+# Bloker tekniske filer og mapper
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /.env
+Disallow: /config/
+
+# Sitemap reference (vil blive tilføjet når sitemap er implementeret)
+Sitemap: https://myprompts.io/sitemap.xml
