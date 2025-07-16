@@ -22,3 +22,6 @@ yarn-error.log
 /.vscode
 /.zed
 .DS_Store
+
+# Local-only resources (notes, full-size images, drafts etc. — do not push to GitHub)
+_dev_assets/
