@@ -226,17 +226,17 @@
                     /*
                     [
                         'id' => 'twitter',
-                        'href' => 'https://www.facebook.com/dgrinddev/',
+                        'href' => 'https://x.com/dgrinddev',
                         'icon' => 'bootstrap.twitter',
                     ],
                     [
                         'id' => 'github',
-                        'href' => 'https://github.com/dGrinderslev-dk',
+                        'href' => 'https://github.com/dgrinddev',
                         'icon' => 'bootstrap.github',
                     ],
                     [
                         'id' => 'linkedin',
-                        'href' => 'https://www.linkedin.com/in/daniel-grinderslev/',
+                        'href' => 'https://www.linkedin.com/in/dgrinddev/',
                         'icon' => 'bootstrap.linkedin',
                     ],
                     [
