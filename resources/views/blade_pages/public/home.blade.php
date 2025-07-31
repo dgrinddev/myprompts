@@ -174,8 +174,8 @@
 														{{--
 														<track default kind="captions" srclang="en" src="path to your .vtt file" />
 														--}}
-														<source src="https://myprompts-video-pull.b-cdn.net/myprompts-demo-video.webm" type="video/webm">
-														<source src="https://myprompts-video-pull.b-cdn.net/myprompts-demo-video.mp4" type="video/mp4">
+														<source src="https://myprompts-cdn.b-cdn.net/myprompts-demo-video.webm" type="video/webm">
+														<source src="https://myprompts-cdn.b-cdn.net/myprompts-demo-video.mp4" type="video/mp4">
 														{{ __('pages/public/home.heroSection.videoModal_videoUnsupported') }}
 												</video>
 										</div>
