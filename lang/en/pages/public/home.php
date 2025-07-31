@@ -79,7 +79,7 @@ return [
 		],
 		'credits' => [
 			'prefix' => 'Developed by',
-			'link_label' => 'Daniel Grinderslev - LayoutLive.dk',
+			'link_label' => 'dgrind.dev',
 		],
 	],
 ];
