@@ -226,17 +226,17 @@
                     /*
                     [
                         'id' => 'twitter',
-                        'href' => 'https://x.com/dgrinddev',
+                        'href' => 'https://x.com/',
                         'icon' => 'bootstrap.twitter',
                     ],
                     [
                         'id' => 'github',
-                        'href' => 'https://github.com/dgrinddev',
+                        'href' => 'https://github.com/',
                         'icon' => 'bootstrap.github',
                     ],
                     [
                         'id' => 'linkedin',
-                        'href' => 'https://www.linkedin.com/in/dgrinddev/',
+                        'href' => 'https://www.linkedin.com/',
                         'icon' => 'bootstrap.linkedin',
                     ],
                     [

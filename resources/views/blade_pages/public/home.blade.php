@@ -43,8 +43,8 @@
 			'url' => \Illuminate\Support\Str::finish(config('app.url'), '/'),
 			'logo' => asset('images/other/logo.png'),
 			'sameAs' => [
-				"https://www.facebook.com/layoutlive.dk/",
-				"https://layoutlive.dk/"
+				"https://www.facebook.com/myprompts/",
+				"https://github.com/dgrinddev/myprompts"
 			],
 	], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
 	</script>
