@@ -139,12 +139,12 @@
                     <div class="flex flex-col gap-y-6">
                         @auth
                             <!-- Dashboard link -->
-                            <div class="text-center list-item">
+                            <div class="text-center">
                                 <x-layouts.guest.components.nav-link :link="$dashboardLink" class="text-lg" />
                             </div>
                         @else
                             <!-- Login link -->
-                            <div class="text-center list-item">
+                            <div class="text-center">
                                 <x-layouts.guest.components.nav-link :link="$loginLink" class="text-lg" />
                             </div>
                             <!-- Tilmeld knap -->
