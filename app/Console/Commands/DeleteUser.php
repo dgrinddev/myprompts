@@ -7,10 +7,11 @@ use Illuminate\Console\Command;
 
 /**
  * Usage:
- *   php artisan user:delete {id}
+ *   php artisan user:delete {id} [--force]
  *
- * Example:
+ * Examples:
  *   php artisan user:delete 5
+ *   php artisan user:delete 5 --force
  */
 class DeleteUser extends Command
 {
@@ -19,7 +20,7 @@ class DeleteUser extends Command
      *
      * @var string
      */
-    protected $signature = 'user:delete {id : The ID of the user to delete}';
+    protected $signature = 'user:delete {id : The ID of the user to delete} {--force : Delete without confirmation}';
 
     /**
      * The console command description.
@@ -59,19 +60,23 @@ class DeleteUser extends Command
             ]
         );
 
-        $this->newLine();
-
-        // warn() draws attention to destructive actions
-        $this->warn('This action will permanently delete the user.');
-
-        if (! $this->confirm("Are you sure you want to delete user #{$userId} ?")) {
-            // The user chose not to continue, this is not considered an error. comment() is used for neutral informational messages (neither success nor error)
-            $this->comment('Operation cancelled.');
-
+        // If the `--force` option is NOT provided, we ask the user for confirmation
+        if (! $this->option('force')) {
             $this->newLine();
 
-            // exit code 0 signals successful, normal termination of the command
-            return 0;
+            // warn() draws attention to destructive actions
+            $this->warn('This action will permanently delete the user.');
+
+            // confirm() prompts the user with a yes/no question and returns true only if the user confirms
+            if (! $this->confirm("Are you sure you want to delete user #{$userId} ?")) {
+                // The user chose not to continue, this is not considered an error. comment() is used for neutral informational messages (neither success nor error)
+                $this->comment('Operation cancelled.');
+    
+                $this->newLine();
+    
+                // exit code 0 signals successful, normal termination of the command
+                return 0;
+            }
         }
 
         $user->delete();
