@@ -3,7 +3,7 @@
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Layout;
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new
 #[Layout('components.layouts.app.settings', [
