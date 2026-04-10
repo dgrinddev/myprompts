@@ -1,6 +1,6 @@
 # MyPrompts.io
 
-MyPrompts.io is an AI prompt manager for storing, organizing, and accessing your prompts for ChatGPT, Midjourney, and other AI tools.
+MyPrompts is an AI prompt manager for storing, organizing, and accessing your prompts for ChatGPT, Midjourney, and other AI tools.
 
 Live demo: [MyPrompts.io](https://myprompts.io/)
 
