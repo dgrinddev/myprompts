@@ -5,16 +5,16 @@ use App\Livewire\User\PromptForm;
 use App\Livewire\User\PromptList;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/prompts/uncategorized', PromptList::class)
+Route::livewire('/prompts/uncategorized', PromptList::class)
 	->name('user.user-prompts.uncategorized');
 
-Route::get('/prompts/all', PromptList::class)
+Route::livewire('/prompts/all', PromptList::class)
 	->name('user.user-prompts.all');
 
-Route::get('/prompts/create', PromptForm::class) // `/user/prompts/create` (har `/user` prefixed til url)
+Route::livewire('/prompts/create', PromptForm::class) // `/user/prompts/create` (har `/user` prefixed til url)
 	->name('user.user-prompts.create');
 
-Route::get('/prompts/{prompt}/edit', PromptForm::class) // `/user/prompts/{prompt}/edit`
+Route::livewire('/prompts/{prompt}/edit', PromptForm::class) // `/user/prompts/{prompt}/edit`
 	->name('user.user-prompts.edit');
 
 /*

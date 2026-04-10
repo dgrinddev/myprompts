@@ -8,5 +8,5 @@ Route::get('/admin-dashboard', function () { // `/admin/admin-dashboard` (har `/
 	return view('blade_pages.admin.admin-dashboard');
 })->name('admin.admin-pages.admin-dashboard');
 
-Route::get('/users-overview', UsersOverview::class)
+Route::livewire('/users-overview', UsersOverview::class)
 	->name('admin.admin-pages.users-overview');
